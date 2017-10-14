@@ -1,5 +1,11 @@
+/* Simple form for employee details. Asks user for details then prints them back to them.
+
+Version 1.1.0 - Dylan Nichols 2017 */
+
+// connect submit button to variable
 let submit = document.querySelector("#submit")
 
+// sets up class to make employee objects, setters for employee properties and displayEmployee() method that prints the properties to the screen
 class Employee {
 
     set fname(value) {
@@ -27,6 +33,7 @@ class Employee {
     }
 }
 
+// when submit is clicked, removes form from screen, creates employee object and sets properties to html input then prints properties
 let submitForm = () => {
     let user = new Employee()
     user.fname = document.querySelector("#fname").value
